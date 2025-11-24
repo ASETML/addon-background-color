@@ -18,3 +18,13 @@ jobs:
           npm run lint:check
           npm run lint:fix
           npm audit
+          npm run build
+
+      - name: Artifact
+        run: zip -r bgAddon.zip .
+
+      - name: Upload artifact
+        uses: action/upload-artifact@v4
+        with:
+          name: bgAddon
+          path: bgAddon.zip
