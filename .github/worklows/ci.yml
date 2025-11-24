@@ -1,0 +1,17 @@
+name: CI
+on:
+  push: main
+  pull-request:
+
+jobs:
+  build:
+    runs-on: ubuntu:latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Build app
+        run: |
+          npm run lint:check
+          npm run lint:fix
+          npm audit
