@@ -21,7 +21,7 @@ jobs:
           npm run build
 
       - name: Artifact
-        run: zip -r bgAddon.zip .
+        run: zip -r bgAddon.zip .output/
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
