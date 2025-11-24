@@ -24,7 +24,7 @@ jobs:
         run: zip -r bgAddon.zip .
 
       - name: Upload artifact
-        uses: action/upload-artifact@v4
+        uses: actions/upload-artifact@v4
         with:
           name: bgAddon
           path: bgAddon.zip
