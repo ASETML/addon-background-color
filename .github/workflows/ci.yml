@@ -14,6 +14,7 @@ jobs:
 
       - name: Build app
         run: |
+          npm i
           npm run lint:check
           npm run lint:fix
           npm audit
