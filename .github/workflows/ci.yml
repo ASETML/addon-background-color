@@ -19,6 +19,7 @@ jobs:
           npm run lint:fix
           npm audit
           npm run build
+          npm run build:firefox
 
       - name: Artifact
         run: zip -r bgAddon.zip .output/
